@@ -253,3 +253,54 @@ body{
   background-color: #bb9457;
 
 }
+
+
+/*------------ Pagina de login / sigin up ---------------------------*/
+.container-access {
+  padding: 130px;
+}
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  margin-bottom: 1.5rem;
+  color: #432818;
+}
+
+.form-label {
+  color: #432818;
+}
+
+@media (max-width: 576px) {
+  .card {
+    padding: 1rem;
+  }
+  
+
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .card {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .card {
+    padding: 3rem;
+  }
+}
+
+
+
+/*------------------------Para Pagina Contacto----------------------------------------------------*/
+ .form-check-input , .form-control{
+  border-color: #4328186c;
+ }
+
+ .container-contact {
+  padding: 130px;
+ }
