@@ -48,7 +48,7 @@ body{
 }
 
 
-/*--------------------------------SECCION NOTICIAS -----------------------------------------------------------------*/
+/*  SECCION NOTICIAS  */
 
 .noticia {
   display: flex;
@@ -255,7 +255,7 @@ body{
 }
 
 
-/*------------ Pagina de login / sigin up ---------------------------*/
+/* Pagina de login / sigin up */
 .container-access {
   padding: 130px;
 }
@@ -296,7 +296,7 @@ body{
 
 
 
-/*------------------------Para Pagina Contacto----------------------------------------------------*/
+/*            Para Pagina Contacto         */ 
  .form-check-input , .form-control{
   border-color: #4328186c;
  }
