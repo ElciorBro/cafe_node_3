@@ -16,6 +16,15 @@
     <!-- Importaciones -->
     <link rel="stylesheet" type="text/css" href="CSS/styles.css">
 
+    <style>
+        .navbar-custom {
+            
+            background: rgb(92,75,75);
+            background: linear-gradient(90deg, rgba(92,75,75,1) 11%, rgba(110,111,116,1) 49%, rgba(92,75,75,1) 81%);
+        }
+    </style>
+
+
     <!-- Titulo -->
     <title>Rincon Cafe | Contacto</title>
 </head>
@@ -23,7 +32,7 @@
     <body>
 
  <!-- Barra de navegación -->
- <nav class="navbar navbar-expand-lg navbar-custom" style="background-color: #99582A">
+ <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="./index.html">
@@ -98,6 +107,14 @@
                             <label for="mensaje" class="form-label">Mensaje</label>
                             <textarea class="form-control" id="mensaje" rows="6" placeholder="Escribe tu mensaje aquí" required></textarea>
                         </div>
+
+                        <div class="mb-3">
+                            <label for="imagen" class="form-label">Agregar Imagen</label>
+                            <input type="file" class="form-control-file" id="imagen" accept="image/*">
+
+                        </div>
+
+
                         <div class="mb-3">
                             <label class="form-label">¿Cómo nos conociste?</label>
                             <div class="form-check">
