@@ -91,7 +91,7 @@ body{
   align-items: center;
   /* margin: 0; */
   padding: 5px 20px;
-
+  min-height: 477px;
 }
 
 .product-card {

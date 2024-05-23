@@ -32,30 +32,41 @@ function detectarTipoPantalla() {
 const showCards = (index, listElement, longitud) => {
   listElement.forEach((card) => {
       card.classList.add('sacar-producto');
-      card.classList.remove('mostrar-producto', 'mover-izquierda', 'mover-derecha');
+      card.classList.remove('mostrar-producto','move-left-in', 'move-left-out', 'move-right-in', 'move-right-out');
   });
 
   for (let i = index; i < index + longitud && i < listElement.length; i++) {
       listElement[i].classList.add('mostrar-producto');
-      listElement[i].classList.remove('sacar-producto', 'mover-izquierda', 'mover-derecha');
+      listElement[i].classList.remove('sacar-producto');
   }
 }
 
 const moveLeftCards = (index, listElement , longitud) => {
   for (let i = index; i < index + longitud && i < listElement.length; i++) {
-      listElement[i].classList.add('move-left-out');
-      listElement[i].classList.remove('mostrar-producto');
-      listElement[i + longitud].classList.add('move-left-in')
+    if(index === 0) {
+        listElement[i].classList.add('move-left-out');
+        listElement[i].classList.remove('mostrar-producto');
+        listElement[i + longitud].classList.add('move-left-in');
+    } else if (index === 4) {
+        listElement[i].classList.add('move-left-out');
+        listElement[i].classList.remove('mostrar-producto');
+        listElement[i - longitud].classList.add('move-left-in');
+    }
   }
 }
 
 const moveRightCards = (index, listElement, longitud) => {
   for (let i = index; i < index + longitud && i < listElement.length; i++) {
-      listElement[i].classList.add('move-right-out');
-      listElement[i].classList.remove('mostrar-producto','move-left-in', 'move-left-out');
-      listElement[i + longitud].classList.add('move-right-in')
-
-  }
+        if (index === 0) {
+            listElement[i].classList.add('move-right-out');
+            listElement[i].classList.remove('mostrar-producto','move-left-in', 'move-left-out');
+            listElement[i + longitud].classList.add('move-right-in')
+        } else if (index === 4) {
+            listElement[i].classList.add('move-right-out');
+            listElement[i].classList.remove('mostrar-producto','move-left-in', 'move-left-out');
+            listElement[i - longitud].classList.add('move-right-in');
+        }
+    }
 }
 
 const carouselProducts = () => {
@@ -63,29 +74,33 @@ const carouselProducts = () => {
   const cantidad = cantidadMostrada(screenSize)
 
   const cards = document.querySelectorAll(".product-card");
-  const currentIndex = 0
+  let currentIndex = 0
 
   showCards(currentIndex, cards, cantidad)
 
   // Botón para avanzar a las siguientes 4 cards
   document.getElementById("nextProduct").addEventListener("click", function () {
-      moveLeftCards(currentIndex, cards, cantidad)
-      currentIndex += 4;
-      showCards(currentIndex, cards, cantidad);
-  });
+    moveLeftCards(currentIndex, cards, cantidad)
+        if(currentIndex === 4) {
+            currentIndex -= 4;
+            setTimeout(() => showCards(currentIndex, cards, cantidad), 500);
+        } else {
+            currentIndex += cantidad;
+            setTimeout(() => showCards(currentIndex, cards, cantidad), 500);
+        }
+    });
 
   // Botón para retroceder a las 4 cards anteriores
   document.getElementById("prevProduct").addEventListener("click", function () {
-      if (currentIndex >= 4) {
-          moveRightCards(currentIndex, cards, cantidad);
-          currentIndex -= 4;
-          showCards(currentIndex, cards, cantidad);
-      } else if (currentIndex == 0) {
-          moveRightCards(currentIndex, cards, cantidad);
-          currentIndex += 4;
-          showCards(currentIndex, cards, cantidad);
-      }
-  });
+        moveRightCards(currentIndex, cards, cantidad);
+        if(currentIndex === 0) {
+            currentIndex += cantidad;
+            setTimeout(() => showCards(currentIndex, cards, cantidad), 500);
+        } else {
+            currentIndex -= cantidad;
+            setTimeout(() => showCards(currentIndex, cards, cantidad), 500);
+        }
+    });
 }
 
 document.addEventListener("DOMContentLoaded", carouselProducts);
