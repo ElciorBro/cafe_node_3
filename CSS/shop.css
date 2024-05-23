@@ -35,6 +35,13 @@
     border-color: #432818; 
 }
 
+.btn-primary:oncli {
+    background-color: #432818;
+    color: white;
+    border-color: #432818; 
+}
+
+
 .btn-success {
     background-color: #8d7340d5;
     color: white;
@@ -47,6 +54,8 @@
     color: white;
     border-color: #8d7340; 
 }
+
+
 
 
 /* Filtros */

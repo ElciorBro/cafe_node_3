@@ -19,6 +19,7 @@
 
     <!-- Título -->
     <title>Rincon Cafe | Shop</title>
+
   </head>
 
   <body>
@@ -118,7 +119,7 @@
                   <p class="card-text">Descripción del producto</p>
                   <p><strong>Precio:</strong> $10.00</p>
                   <p><strong>Valoración:</strong> ★★★★☆</p>
-                  <a href="#" class="btn btn-primary btn-sm">Ver Producto</a>
+                  <a href="#" class="btn btn-primary btn-sm" id="Primary">Ver Producto</a>
                   <button class="btn btn-success btn-sm">Agregar al Carrito</button>
                 </div>
               </div>
@@ -146,7 +147,7 @@
 					<p class="card-text">Descripción del producto</p>
 					<p><strong>Precio:</strong> $10.00</p>
 					<p><strong>Valoración:</strong> ★★★★☆</p>
-					<a href="#" class="btn btn-primary btn-sm">Ver Producto</a>
+					<a href="#" class="btn btn-primary btn-sm" >Ver Producto</a>
 					<button class="btn btn-success btn-sm">Agregar al Carrito</button>
 				  </div>
 				</div>
@@ -302,6 +303,17 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
+	<!--script para ccolor del boton-->
+	<script>
+		
+		var botonPrimario = document.getElementById("Primary");
+
+		botonPrimario.addEventListener("click", function() {
+		
+		  botonPrimario.style.backgroundColor = "#432818c7"; 
+		  botonPrimario.style.borderColor = "#432818c7"; 
+		});
+	  </script>
 
   </body>
 </html>
