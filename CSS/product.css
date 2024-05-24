@@ -1,0 +1,37 @@
+
+
+.product-container {
+    margin: 20px;
+    display: flex;
+}
+
+.product-section img {
+    width: 450px;
+    min-width: 450px;
+    margin: 0px 20px;
+}
+
+.product-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 30px;
+}
+
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.description {
+}
+
+.compra-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
