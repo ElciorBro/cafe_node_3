@@ -106,6 +106,7 @@ body{
   align-items: center;
   margin-top: 10px;
   margin-bottom: 30px;
+  /* max-width: 10rem; */
 }
 
 .product-container {

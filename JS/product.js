@@ -116,22 +116,22 @@ const products = [
       available: 9,
       calification: 4.7
     }
-  ];
+];
   
   
-  // Función para obtener los parámetros de la URL
-  function getQueryParams() {
-    const params = {};
-    const queryString = window.location.search.substring(1);
-    const queryArray = queryString.split('&');
-  
-    queryArray.forEach(query => {
-      const [key, value] = query.split('=');
-      params[key] = decodeURIComponent(value);
-    });
-  
-    return params;
-  }
+// Función para obtener los parámetros de la URL
+function getQueryParams() {
+const params = {};
+const queryString = window.location.search.substring(1);
+const queryArray = queryString.split('&');
+
+queryArray.forEach(query => {
+    const [key, value] = query.split('=');
+    params[key] = decodeURIComponent(value);
+});
+
+return params;
+}
   
 // Función para mostrar los detalles del producto
 function showProductDetails() {
