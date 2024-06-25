@@ -55,6 +55,11 @@
     border-color: #8d7340; 
 }
 
+.seleccionado {
+    background-color: #432818c7;
+    border-color: #432818c7;
+    color: white;
+}
 
 
 
